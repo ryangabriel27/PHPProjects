@@ -55,16 +55,16 @@ class UsuarioController extends Controller
 
 
         $usuario = Usuario::create([
-            'nome' => $request->name,
+            'nome' => $request->nome,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
 
 
-        Auth::login($usuario);
+        // Auth::login($usuario);
 
 
-        return redirect('/dashboard');
+        return redirect('/');
     }
 
 
