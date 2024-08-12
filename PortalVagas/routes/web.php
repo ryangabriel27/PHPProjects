@@ -11,7 +11,7 @@ Route::get('/', function (){
 Route::get('/login', [UsuarioController::class, 'showLoginForm'])->name('usuarios.login');
 
 // Processar o login do usuário
-Route::post('/login', [UsuarioController::class, 'login']);
+Route::post('/login', [UsuarioController::class, 'login'])->name('usuarios.login');
 
 // Rota para exibir o formulário de registro
 Route::get('/register', [UsuarioController::class, 'showRegisterForm'])->
@@ -26,6 +26,6 @@ Route::post('/logout', [UsuarioController::class, 'logout'])->name('usuarios.log
 
 // Definir a rota para o dashboard (exemplo)
 Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware('auth');
+    return view('usuarios.dashboard');
+})->middleware('auth')->name('usuarios.dashboard');
 

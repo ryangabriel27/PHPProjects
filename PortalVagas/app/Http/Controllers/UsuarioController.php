@@ -61,10 +61,10 @@ class UsuarioController extends Controller
         ]);
 
 
-        // Auth::login($usuario);
+        Auth::login($usuario);
 
 
-        return redirect('/');
+        return redirect('/dashboard');
     }
 
 
