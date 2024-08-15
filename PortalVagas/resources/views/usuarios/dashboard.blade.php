@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h2>Dashboard - Usuário</h2>
+    <h2>Dashboard - {{Auth::user()->tipo}}</h2>
 
     <form action="{{route('usuarios.logout')}}" method="post">
         @csrf

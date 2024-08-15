@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\VagaController;
+use App\Http\Middleware\VagaMiddleware;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function (){
@@ -28,4 +30,6 @@ Route::post('/logout', [UsuarioController::class, 'logout'])->name('usuarios.log
 Route::get('/dashboard', function () {
     return view('usuarios.dashboard');
 })->middleware('auth')->name('usuarios.dashboard');
+
+Route::resource('/vagas', VagaController::class)->middleware(VagaMiddleware::class);
 

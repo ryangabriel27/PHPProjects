@@ -3,23 +3,19 @@
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="/">Home</a>
   </li>
+  @if (Auth::user()->isEmpresa())
   <li class="nav-item">
-    <a class="nav-link" href="/login">Logout</a>
+    <a class="nav-link" href="/vagas">Acessar o dashboard de vagas/a>
   </li>
-  @if (
-  request() //captura os dados da requisição
-  ->user() //captura o usuario que fez a requisição
-  ->where('tipo','empresa') // a partir de model binding ele procura se o tipo é empresa
-  ->first() //transforma o resultado da consulta em um valor boolean, retornando true or false
-  )
+  <!-- @else
   <li class="nav-item">
-    <a class="nav-link" href="">Cadastrar Vagas</a>
-  </li>
-  @else
-  <li class="nav-item">
-        <a class="nav-link" href="">Buscar vagas</a>
-      </li>
+    <a class="nav-link" href="">Buscar vagas</a>
+  </li> -->
   @endif
+  <form action="{{route('usuarios.logout')}}" method="post">
+    @csrf
+    <input type="submit" value="Logout" class="nav-item">
+  </form>
   @else
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="/">Home</a>
@@ -32,8 +28,3 @@
   </li>
   @endif
 </ul>
-
-<div class="container-flex">
-
-
-</div>
