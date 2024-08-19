@@ -13,11 +13,6 @@ class Vaga extends Model
         'titulo', 'descricao', 'localizacao', 'salario', 'empresa'
     ];
 
-    public function empresa()
-    {
-        return $this->belongsTo(Empresa::class);
-    }
-
     public function inscricoes()
     {
         return $this->hasMany(Inscricao::class);
