@@ -25,11 +25,11 @@ class Usuario extends Authenticatable
 
     public function isPaciente()
     {
-        return $this->tipo == 'paciente';
+        return $this->tipo === 'paciente';
     }
     
     public function isMedico()
     {
-        return $this->tipo == 'medico';
+        return $this->tipo === 'medico';
     }
 }

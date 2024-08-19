@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\ConsultaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
+use App\Models\Consulta;
 
 Route::get('/', function (){
     return view('home');
@@ -28,3 +30,5 @@ Route::post('/logout', [UsuarioController::class, 'logout'])->name('usuarios.log
 Route::get('/dashboard', function () {
     return view('usuarios.dashboard');
 })->middleware('auth')->name('usuarios.dashboard');
+
+Route::resource('/consultas',ConsultaController::class)->middleware('auth');
