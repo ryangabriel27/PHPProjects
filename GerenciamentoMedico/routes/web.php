@@ -34,6 +34,8 @@ Route::post('/logout', [UsuarioController::class, 'logout'])->name('usuarios.log
 Route::get('/dashboard', [DashboardController::class, 'index'])
 ->middleware('auth')->name('dashboard');
 
+Route::get('/dashboard/minhas-consultas', [DashboardController::class, 'minhasConsultas'])->name('dashboard.minhasConsultas');
+
 Route::resource('/consultas',ConsultaController::class)->middleware(ConsultaMiddleware::class)->except('show');
 
 // Visualização de um produto específico

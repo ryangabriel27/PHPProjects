@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Agenda;
 use App\Models\Consulta;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -21,5 +23,17 @@ class DashboardController extends Controller
         })->get();
 
         return view('usuarios.dashboard', compact('consultas'));
+    }
+
+
+    // Novo método para exibir as consultas agendadas do paciente
+    public function minhasConsultas()
+    {
+        $usuarioId = Auth::id();
+        $consultas = Agenda::where('usuario_id', $usuarioId)
+            ->with('consulta')
+            ->get();
+
+        return view('usuarios.minhasConsultas', compact('consultas'));
     }
 }

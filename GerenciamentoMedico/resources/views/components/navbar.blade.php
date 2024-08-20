@@ -11,6 +11,9 @@
     <li class="nav-item">
       <a class="nav-link" href="/dashboard">Buscar consultas</a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/dashboard/minhas-consultas">Minhas consultas agendadas</a>
+    </li>
     @endif
     <li class="nav-item">
       <a class="nav-link" href="">Logado como {{ Auth::user()->tipo }}</a>

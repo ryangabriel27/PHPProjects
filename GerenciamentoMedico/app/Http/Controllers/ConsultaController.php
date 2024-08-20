@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class ConsultaController extends Controller
 {
     //
-     /**
+    /**
      * Display a listing of the resource.
      */
     public function index()
@@ -40,10 +40,21 @@ class ConsultaController extends Controller
             'medico_id' => 'required',
             'localidade' => 'required'
         ]);
-        
-    
+
+        // Verifica se já existe uma consulta para o mesmo médico na mesma data e horário
+        $existeConsulta = Consulta::where('data', $dados['data'])
+            ->where('horario', $dados['horario'])
+            ->where('medico_id', $dados['medico_id'])
+            ->exists();
+
+        if ($existeConsulta) {
+            return redirect()->back()
+                ->withErrors(['horario' => 'Já existe uma consulta agendada para este horário.'])
+                ->withInput();
+        }
+
         Consulta::create($dados);
-    
+
         return redirect()->route('consultas.index')
             ->with('success', 'Consulta criada com sucesso.');
     }
@@ -66,6 +77,7 @@ class ConsultaController extends Controller
             'horario' => 'required|date_format:H:i',
             'especialidade' => 'required',
             'medico_id' => 'required',
+            'localidade' => 'required',
         ]);
 
         $consulta->update($dados);
