@@ -13,7 +13,8 @@ class Consulta extends Model
         'horario',
         'data',
         'especialidade',
-        'medico'
+        'medico_id',
+        'localidade'
     ];
 
     public function medico()
@@ -21,7 +22,7 @@ class Consulta extends Model
         return $this->belongsTo(Usuario::class);
     }
 
-    public function inscricoes()
+    public function agendas()
     {
         return $this->hasMany(Agenda::class);
     }

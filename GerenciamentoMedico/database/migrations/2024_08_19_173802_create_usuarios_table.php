@@ -18,8 +18,11 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('tipo',['paciente','medico'])->default('paciente');
-            $table->string('cnpj')->nullable();
-            $table->string('nome_empresa')->nullable();
+            $table->string('cpf')->unique();
+            $table->string('cep');
+            $table->string('cidade');
+            $table->string('estado');
+            $table->string('crm')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -35,13 +35,15 @@ class ConsultaController extends Controller
     {
         $dados = $request->validate([
             'data' => 'required|date',
-            'hora' => 'required|date_format:H:i',
+            'horario' => 'required|date_format:H:i',
             'especialidade' => 'required',
-            'medico_id' => 'required|exists:usuarios,id'
+            'medico_id' => 'required',
+            'localidade' => 'required'
         ]);
-
+        
+    
         Consulta::create($dados);
-
+    
         return redirect()->route('consultas.index')
             ->with('success', 'Consulta criada com sucesso.');
     }
@@ -61,9 +63,9 @@ class ConsultaController extends Controller
     {
         $dados = $request->validate([
             'data' => 'required|date',
-            'hora' => 'required|date_format:H:i',
-            'descricao' => 'required',
-            'medico_id' => 'required|exists:usuarios,id'
+            'horario' => 'required|date_format:H:i',
+            'especialidade' => 'required',
+            'medico_id' => 'required',
         ]);
 
         $consulta->update($dados);

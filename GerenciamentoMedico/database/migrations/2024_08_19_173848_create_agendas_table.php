@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('usuario_id')->constrained('usuarios'); // Chave estrangeira para a tabela de usuários (pacientes)
             $table->foreignId('consulta_id')->constrained('consultas'); // Chave estrangeira para a tabela de consultas
-            $table->string('status'); // Status da consulta (por exemplo, 'marcada', 'cancelada')
+            $table->string('status')->default('marcada'); // Status da consulta (por exemplo, 'marcada', 'cancelada')
             $table->timestamps();
         });
     }

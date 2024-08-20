@@ -50,21 +50,29 @@ class UsuarioController extends Controller
     // Processar o register de um novo usuário
     public function register(Request $request)
     {
-        // Validações para o register
         $request->validate([
             'nome' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:usuarios',
             'password' => 'required|string|min:8|confirmed',
             'tipo' => 'required|in:paciente,medico',
+            'cpf' => 'required|string|max:14', 
+            'cidade' => 'required|string|max:255',
+            'estado' => 'required|string|max:2',
+            'cep' => 'required|string|max:10', 
+            'crm' => 'nullable|string|max:10'
         ]);
-
-
+        
         // Cria um novo usuário
         $usuario = Usuario::create([
             'nome' => $request->nome,
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'tipo' => $request->tipo,
+            'cpf' => $request->cpf,
+            'cidade' => $request->cidade,
+            'estado' => $request->estado,
+            'cep' => $request->cep,
+            'crm' => $request->tipo == 'medico' ? $request->crm : null,
         ]);
 
 

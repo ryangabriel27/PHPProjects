@@ -9,7 +9,7 @@
     </li>
     @else
     <li class="nav-item">
-      <a class="nav-link" href="/consultas">Buscar consultas</a>
+      <a class="nav-link" href="/dashboard">Buscar consultas</a>
     </li>
     @endif
     <li class="nav-item">

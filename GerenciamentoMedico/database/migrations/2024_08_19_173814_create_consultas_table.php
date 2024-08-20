@@ -17,6 +17,7 @@ return new class extends Migration
             $table->time('horario'); // Horário da consulta
             $table->string('especialidade'); // Especialidade médica
             $table->foreignId('medico_id')->constrained('usuarios'); // Relaciona com a tabela de usuários (médicos)
+            $table->string('localidade');
             $table->timestamps();
         });
     }

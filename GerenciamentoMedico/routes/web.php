@@ -1,13 +1,17 @@
 <?php
 
+use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\ConsultaController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Middleware\ConsultaMiddleware;
 use App\Models\Consulta;
 
-Route::get('/', function (){
-    return view('home');
-});
+// Rota para exibir a homePage
+Route::get('',[HomeController::class,'index'])
+->name('home');
 
 // Exibir o formulário de login
 Route::get('/login', [UsuarioController::class, 'showLoginForm'])->name('usuarios.login');
@@ -26,9 +30,15 @@ name('usuarios.register');
 // Realizar o logout do usuário
 Route::post('/logout', [UsuarioController::class, 'logout'])->name('usuarios.logout');
 
-// Definir a rota para o dashboard (exemplo)
-Route::get('/dashboard', function () {
-    return view('usuarios.dashboard');
-})->middleware('auth')->name('usuarios.dashboard');
+// Rota para o dashboard, protegida por autenticação
+Route::get('/dashboard', [DashboardController::class, 'index'])
+->middleware('auth')->name('dashboard');
 
-Route::resource('/consultas',ConsultaController::class)->middleware('auth');
+Route::resource('/consultas',ConsultaController::class)->middleware(ConsultaMiddleware::class)->except('show');
+
+// Visualização de um produto específico
+Route::get('consultas/{consulta}', [ConsultaController::class, 'show'])
+->middleware('auth')->name('consultas.show');
+
+Route::post('agenda/add/{consulta}', [AgendaController::class, 'add'])
+->middleware('auth')->name('agenda.add');
