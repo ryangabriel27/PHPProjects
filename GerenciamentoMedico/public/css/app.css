@@ -5,7 +5,7 @@
     height: 4vh;
     display: flex;
     justify-content: center;
-    background-color: #f63f00;
+    background-color: #00adb5;
 }
 
 .header img {
@@ -13,21 +13,89 @@
 }
 
 .navbar {
-    -webkit-box-shadow: 0px 12px 37px -19px rgba(246, 63, 0, 1);
-    -moz-box-shadow: 0px 12px 37px -19px rgba(246, 63, 0, 1);
-    box-shadow: 0px 12px 37px -19px rgba(246, 63, 0, 1);
+    -webkit-box-shadow: 0px 12px 37px -19px rgb(83, 179, 206);
+    -moz-box-shadow: 0px 12px 37px -19px rgb(83, 179, 206);
+    box-shadow: 0px 12px 37px -19px rgb(83, 179, 206);
     justify-content: center;
     margin-bottom: 4vh;
 }
 
+
 .navbar .nav .nav-item a {
     text-decoration: none;
-    color: #f63f00;
+    color: #007c82;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
+    border-radius: 8px;
+}
+
+.navbar .nav .nav-item a:hover{
+    background-color: #17939a;
+    transition: 0.2s;
+    color: white;
 }
 
 footer {
     color: white;
-    background-color: #f63f00;
+    background-color: #007c82;
+}
+
+
+.search-form .search-form-input{
+    width: 12em;
+    height: 2.5em;
+    padding: 0 0 0 8px;
+    border-radius: 8px;
+    border: 2px solid rgb(203, 203, 203);
+    color: rgb(96, 96, 96);
+}
+
+
+.search-form button{
+    width: 8em;
+    height: 2.5em;
+    margin-left: 0.5em;
+    border-radius: 8px;
+    border: 2px solid rgb(13, 153, 178);
+    background-color: #00adb5;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.search-form button:hover{
+    transform: scale(1.05);
+    transition: 0.4s;
+    background-color: #098187;
+    border: 0;
+}
+
+.search-form{
+    margin-bottom: 2em;
+}
+
+.row .card:hover{
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+.navbar-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-form input{
+    background-color: white;
+    border: 0;
+    color: #007c82;
+    height: 2.5em;
+    width: 6em;
+    border-radius: 8px;
+}
+
+.navbar-form input:hover{
+    background-color: #17939a;
+    transition: 0.2s;
+    color: white;
 }

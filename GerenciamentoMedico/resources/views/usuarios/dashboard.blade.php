@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Dashboard de Consultas</h1>
+    <h1>Buscar Consultas</h1>
 
-    <form method="GET" action="{{ route('dashboard') }}">
-        <input type="text" name="search" placeholder="Pesquisar consultas..." value="{{ request('search') }}">
+    <form method="GET" action="{{ route('dashboard') }}" class="search-form">
+        <input type="text" name="search" placeholder="Pesquisar consultas..." value="{{ request('search') }}" class="search-form-input">
         <button type="submit">Pesquisar</button>
     </form>
 

@@ -18,9 +18,9 @@
     <li class="nav-item">
       <a class="nav-link" href="">Logado como {{ Auth::user()->tipo }}</a>
     </li>
-    <form action="{{route('usuarios.logout')}}" method="post">
+    <form action="{{route('usuarios.logout')}}" method="post" class="navbar-form">
       @csrf
-      <input type="submit" value="Logout" class="nav-item">
+      <input type="submit" value="Sair" class="nav-item">
     </form>
   @else
     <li class="nav-item">
