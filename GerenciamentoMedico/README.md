@@ -35,49 +35,51 @@
 ##### 	Github Projects
 ##### 	Figma
 
-•	Análise de Risco:
-o	Atraso no desenvolvimento por razões externas ao trabalho
-	Solução: Se concentrar na produção do projeto, se atentando sempre a data de entrega
-o	Problemas de conexão com banco de dados
-	Solução: Realização de backups e manutenções frequentes na plataforma garantindo que o usuário não utilize uma plataforma com erros.
-o	Falha na segurança ou criptografia dos dados
-	Solução: Revisões constantes aos usuários cadastrados e manutenção no código da plataforma
-o	Conflitos de horários no sistema de agendamento.
-	Solução: Uso de boas práticas de programação para evitar que esses erro possam ocorrer
-•	Diagrama de Desenvolvimento:
+## •	Análise de Risco:
+#### o	Atraso no desenvolvimento por razões externas ao trabalho
+##### 	Solução: Se concentrar na produção do projeto, se atentando sempre a data de entrega
+#### o	Problemas de conexão com banco de dados
+##### 	Solução: Realização de backups e manutenções frequentes na plataforma garantindo que o usuário não utilize uma plataforma com erros.
+#### o	Falha na segurança ou criptografia dos dados
+##### 	Solução: Revisões constantes aos usuários cadastrados e manutenção no código da plataforma
+#### o	Conflitos de horários no sistema de agendamento.
+##### 	Solução: Uso de boas práticas de programação para evitar que esses erro possam ocorrer
+## •	Diagrama de Desenvolvimento:
 
-o	Diagrama de Classe:
-	Usuarios(
-- nome
-- senha
-- email
-- tipo [“medico”, “paciente”]
-- cpf
-- cidade
-- estado
-- cep
-- crm 
-)
-	Consultas(
-- horário
-- data
-- especialidade
-- medico (usuário_id)
-- localidade
-)
-	Agenda(
-- paciente (usuário_id)
-- consulta_id
-- status
-)
+### o	Diagrama de Classe:
+    Usuarios(
+        - nome
+        - senha
+        - email
+        - tipo [“medico”, “paciente”]
+        - cpf
+        - cidade
+        - estado
+        - cep
+        - crm 
+    )
 
-o	Diagrama de Uso:
-	Paciente:
-	Pode buscar, marcar e verificar suas consultas marcadas
-	Médico:
-	Pode criar, editar ,apagar e verificar horários de suas consultas
+    Consultas(
+        - horário
+        - data
+        - especialidade
+        - medico (usuário_id)
+        - localidade
+    )
+	Agenda(
+        - paciente (usuário_id)
+        - consulta_id
+        - status
+    )
 
-o	Diagrama de Fluxo:
+### o	Diagrama de Uso:
+#### Paciente:
+#####  - Pode buscar, marcar e verificar suas consultas marcadas
+
+#### Médico:
+##### - Pode criar, editar ,apagar e verificar horários de suas consultas
+
+### o	Diagrama de Fluxo:
 	Cadastro/Login → [Paciente] → Dashboard - Paciente
 	Pesquisar novas consultas para marca-las
 	Ver suas consultas já marcadas
