@@ -132,15 +132,15 @@
     - ##### Pode criar, editar ,apagar e verificar horários de suas consultas
 
 ## •	Diagrama de Fluxo:
-#### • Cadastro/Login → [Paciente] → Dashboard - Paciente
-#### -> Pesquisar novas consultas para marca-las
-#### ->	Ver suas consultas já marcadas
+- ### Cadastro/Login → [Paciente] → Dashboard (Página interna)
+    - #### Procurar novas consultas para marca-las
+    - #### Ver suas consultas já marcadas
 
-#### •	Cadastro/Login → [Médico] → Dashboard - Médico
-#### -> Verificar a agenda de horários
-#### ->	Editar horários de consultas marcadas ou desmarcadas
-#### ->	Excluir consultas marcadas ou desmarcadas
-#### ->	Criar novos horários de consulta
+- ### 	Cadastro/Login → [Médico] → Dashboard - Médico
+    - #### Verificar a agenda de horários
+    - #### Editar horários de consultas marcadas ou desmarcadas
+    - #### Excluir consultas marcadas ou desmarcadas
+    - #### Criar novos horários de consulta
 
 
 
