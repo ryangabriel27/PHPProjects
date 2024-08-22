@@ -2,6 +2,17 @@
 @section('content')
 <div class="container">
     <h1>Registrar-se</h1>
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    
     <form method="POST" action="{{ route('usuarios.register') }}">
         @csrf
 
@@ -20,7 +31,7 @@
 
         <div class="mb-3">
             <label for="cpf" class="form-label">CPF</label>
-            <input type="text" class="form-control" id="cpf" name="cpf" value="{{ old('cpf') }}" onkeypress="formatar('###.###.###-##',this)" required>
+            <input type="text" class="form-control" id="cpf" name="cpf" value="{{ old('cpf') }}" onkeypress="formatar('###.###.###-##',this)" maxlength="14" oninput="this.value = this.value.replace(/[^0-9]/g, '')"  required>
         </div>
 
         <div class="mb-3">
@@ -33,7 +44,7 @@
         </div>
         <div class="mb-3">
             <label for="cep" class="form-label">CEP</label>
-            <input type="text" class="form-control" id="cep" name="cep" value="{{ old('cep') }}" onkeypress="formatar('#####-###', this)" required>
+            <input type="text" class="form-control" id="cep" name="cep" value="{{ old('cep') }}" onkeypress="formatar('#####-###', this)" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
         </div>
 
         <div class="mb-3">

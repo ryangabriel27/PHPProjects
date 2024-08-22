@@ -168,7 +168,7 @@ footer {
 }
 
 .user-table tbody tr td:hover{
-    background-color: #218085;
+    background-color: #218085a1;
     color: white;
     transform: 0.8s;
 }
@@ -207,11 +207,23 @@ footer {
 }
 
 .textContent {
-    width: 50%;
+    width: 70%;
     margin: 20px;
 }
 
 .textContent h1 {
     font-size: 72px;
     margin-bottom: 0.1em;
+}
+
+.consulta-form button{
+    background: #218085;
+    color: white;
+}
+
+.consulta-form button:hover{
+    background: #175a5e;
+    color: white;
+    transform: scale(1.05);
+    transition: 0.3s;
 }

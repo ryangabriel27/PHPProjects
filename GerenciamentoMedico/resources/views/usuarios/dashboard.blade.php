@@ -8,6 +8,7 @@
         <button type="submit">Pesquisar</button>
     </form>
 
+    
     <div class="row">
         @foreach ($consultas as $consulta)
             <div class="col-md-4">

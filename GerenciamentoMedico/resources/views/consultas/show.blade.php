@@ -5,7 +5,6 @@
         <div class="row">
             <div class="col-md-6">
                 <h2>Especialidade: {{ $consulta->especialidade }}</h2>
-                <p>Descrição: {{ $consulta->descricao }}</p>
                 <p>Data: {{ \Carbon\Carbon::parse($consulta->data)->format('d/m/Y') }}</p>
                 <p>Hora: {{ \Carbon\Carbon::parse($consulta->horario)->format('H:i') }}</p>
                 <p>Médico: {{ $consulta->medico->nome }}</p>
@@ -28,7 +27,7 @@
                     </div>
                 @endif
 
-                <form method="POST" action="{{ route('agenda.add', $consulta->id) }}">
+                <form method="POST" action="{{ route('agenda.add', $consulta->id) }}" class="consulta-form">
                     @csrf
                     <button type="submit" class="btn btn-primary">Marcar Consulta</button>
                 </form>

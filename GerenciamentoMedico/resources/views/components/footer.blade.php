@@ -9,35 +9,23 @@
     </div>
 
     <div class="col mb-3">
-        <h5>Section</h5>
+        <h5>Cadastro</h5>
         <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Não tem uma conta? Faça seu cadastro</a></li>
         </ul>
     </div>
 
     <div class="col mb-3">
-        <h5>Section</h5>
+        <h5>Login</h5>
         <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Ja tem um cadastro? Faça seu login</a></li>
         </ul>
     </div>
 
     <div class="col mb-3">
-        <h5>Section</h5>
+        <h5>Consultas</h5>
         <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
+            <li class="nav-item mb-2"><a href="/dashboard" class="nav-link p-0 text-white">Procure Consultas</a></li>
         </ul>
     </div>
 </footer>
