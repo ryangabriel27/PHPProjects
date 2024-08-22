@@ -2,27 +2,43 @@
 
 @section('content')
 <div class="container">
-    <div id="consultaCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            @foreach ($consultas as $index => $consulta)
-            <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>{{ $consulta->especialidade }}</h5>
-                    <p>Médico: {{ $consulta->medico->nome }}</p>
-                    <p>Data: {{ \Carbon\Carbon::parse($consulta->data)->format('d/m/Y') }}</p>
-                    <p>Hora: {{ \Carbon\Carbon::parse($consulta->horario)->format('H:i') }}</p>
-                </div>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-5 shadow-4-strong">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="/img/imagem1.webp"
+                    class="d-block w-100" alt="...">
             </div>
-            @endforeach
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="/img/imagem2.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="/img/imagem3.jpeg"
+                    class="d-block w-100" alt="...">
+            </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#consultaCarousel" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#consultaCarousel" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
+    </div>
+    <div class="index-container">
+        <div class="index-content">
+            <div class="imgContent">
+                <img src="/img/avatar1.jpg">
+            </div>
+            <div class="textContent">
+                <h1>SAÚDE</h1>
+                <h3>exemplo</h3>
+                <p>Exemplo</p>
+            </div>
+        </div>
     </div>
 </div>
 @endsection

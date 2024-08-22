@@ -7,7 +7,7 @@
         @if($consultas->isEmpty())
             <p>Você não tem consultas agendadas no momento.</p>
         @else
-            <table class="table">
+            <table class="table table-bordered user-table">
                 <thead>
                     <tr>
                         <th>Especialidade</th>

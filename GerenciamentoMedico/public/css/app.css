@@ -1,4 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+::selection {
+    color: #FFFFFF;
+    background: #218085;
+}
+
+p {
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+h1 {
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+h2 {
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+h3, a, li {
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+h4 {
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+h5 {
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
 
 .header {
     width: 100%;
@@ -24,7 +85,7 @@
 .navbar .nav .nav-item a {
     text-decoration: none;
     color: #007c82;
-    font-family: "Roboto", sans-serif;
+    font-family: "Figtree", sans-serif;
     font-weight: 400;
     border-radius: 8px;
 }
@@ -92,10 +153,65 @@ footer {
     height: 2.5em;
     width: 6em;
     border-radius: 8px;
+    font-family: "Figtree", sans-serif;
 }
 
 .navbar-form input:hover{
     background-color: #17939a;
     transition: 0.2s;
     color: white;
+}
+
+.user-table thead tr th{
+    background-color: #007c82;
+    color: white;
+}
+
+.user-table tbody tr td:hover{
+    background-color: #218085;
+    color: white;
+    transform: 0.8s;
+}
+
+#carouselExampleInterval {
+    margin-top: 2em;
+}
+
+.carousel-item {
+    height: 600px;
+}
+
+.index-container {
+    display: flex;
+    margin: 30px;
+    align-items: center;
+}
+
+.index-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.imgContent {
+    width: 50%;
+    margin: 50px;
+}
+.imgContent img{
+    width: 100%;
+}
+
+.imgContent img:hover {
+    transform: scale(1.05);
+    transition: 0.6s;
+}
+
+.textContent {
+    width: 50%;
+    margin: 20px;
+}
+
+.textContent h1 {
+    font-size: 72px;
+    margin-bottom: 0.1em;
 }
