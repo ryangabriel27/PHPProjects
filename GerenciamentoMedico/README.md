@@ -27,6 +27,7 @@
         - #### Revisar e confirmar o escopo do projeto.
     - ### Análise de Requisitos e Design
         - #### Refinar requisitos do sistema.
+        - #### Procura de clientes pela equipe de comunicação
         - #### Desenvolver e revisar o Diagrama de Classe e Diagramas de Uso e Fluxo.
         - #### Elaborar um protótipo inicial no Figma para a interface.
     - ### Preparação do Ambiente de Desenvolvimento
