@@ -15,6 +15,15 @@ p {
         "wdth" 100;
 }
 
+span{
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100; 
+}
+
 h1 {
     font-family: "Figtree", sans-serif;
     font-optical-sizing: auto;
@@ -51,7 +60,7 @@ h4 {
         "wdth" 100;
 }
 
-h5 {
+h5{
     font-family: "Figtree", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -227,3 +236,4 @@ footer {
     transform: scale(1.05);
     transition: 0.3s;
 }
+

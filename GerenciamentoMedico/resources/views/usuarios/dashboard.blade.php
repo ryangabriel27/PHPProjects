@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+
+    @if(Auth::user()->tipo === 'paciente')
     <h1>Buscar Consultas</h1>
 
     <form method="GET" action="{{ route('dashboard') }}" class="search-form">
@@ -25,4 +27,7 @@
             </div>
         @endforeach
     </div>
+    @else
+    <h1>Bem - vindo, Dr. {{Auth::user()->nome}}</h1>
+    @endif
 @endsection

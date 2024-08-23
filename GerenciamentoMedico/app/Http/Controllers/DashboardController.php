@@ -12,12 +12,9 @@ class DashboardController extends Controller
     public function index(Request $request)
     {
         $search = $request->input('search');
-        $consultas = Consulta::whereDoesntHave('agendas') // Left Join da tabela agenas
+        $consultas = Consulta::whereDoesntHave('agendas') // Left Join da tabela agendas
             ->when($search, function ($query, $search) {
             return $query->where('especialidade', 'like', "%{$search}%")
-                ->orWhereHas('medico', function ($query) use ($search) {
-                    $query->where('nome', 'like', "%{$search}%");
-                })
                 ->orWhere('data', 'like', "%{$search}%")
                 ->orWhere('horario', 'like', "%{$search}%");
         })->get();

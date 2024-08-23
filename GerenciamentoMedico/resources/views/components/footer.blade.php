@@ -2,6 +2,10 @@
 <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
     <div class="col mb-3">
         <p class="text-white">EasySched © 2024</p>
+        <p class="text-white"><span>Alguma dúvida?</span> Entre em contato conosco</p>
+        <p class="text-white">Email: suporte@easysched.com</p>
+        <p class="text-white">Telefone: (19) 98765-4321</p>
+        
     </div>
 
     <div class="col mb-3">
@@ -28,5 +32,6 @@
             <li class="nav-item mb-2"><a href="/dashboard" class="nav-link p-0 text-white">Procure Consultas</a></li>
         </ul>
     </div>
+
 </footer>
 </div>

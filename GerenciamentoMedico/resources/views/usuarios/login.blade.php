@@ -21,13 +21,13 @@
 
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" name="email" class="form-control" required autofocus>
+            <input type="email" name="email" class="form-control" placeholder="Seu e-mail" required autofocus>
         </div>
 
 
         <div class="form-group">
             <label for="password">Senha</label>
-            <input type="password" name="password" class="form-control" required>
+            <input type="password" name="password" class="form-control" placeholder="Sua senha" required>
         </div>
 
 

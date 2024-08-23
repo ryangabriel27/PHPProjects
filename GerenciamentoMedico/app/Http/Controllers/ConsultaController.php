@@ -46,7 +46,8 @@ class ConsultaController extends Controller
             ->where('horario', $dados['horario'])
             ->where('medico_id', $dados['medico_id'])
             ->exists();
-
+        
+            
         if ($existeConsulta) {
             return redirect()->back()
                 ->withErrors(['horario' => 'Já existe uma consulta agendada para este horário.'])

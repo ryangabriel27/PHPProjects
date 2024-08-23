@@ -29,7 +29,11 @@ class UsuarioController extends Controller
         // Tenta autenticar com o guard 'usuario'
         if (Auth::guard('usuario')->attempt($credentials)) {
             $request->session()->regenerate(); // Regenera a sessão para evitar fixação de sessão
-            return redirect()->intended('/dashboard');
+            if(Auth::user()->tipo === 'paciente'){
+                return redirect()->intended('/dashboard');;
+            } else {
+                return redirect()->intended('/consultas');
+            }
         }
 
 
@@ -79,8 +83,11 @@ class UsuarioController extends Controller
         // Faz login automático do novo usuário
         Auth::guard('usuario')->login($usuario);
 
-
-        return redirect('/dashboard');
+        if(Auth::user()->tipo === 'paciente'){
+            return redirect('/dashboard');
+        } else {
+            return redirect('/consultas');
+        }
     }
 
 
