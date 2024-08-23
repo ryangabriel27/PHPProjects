@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Middleware\ConsultaMiddleware;
+use App\Http\Middleware\DashboardMiddleware;
 use App\Models\Consulta;
 
 // Rota para exibir a homePage
@@ -32,7 +33,7 @@ Route::post('/logout', [UsuarioController::class, 'logout'])->name('usuarios.log
 
 // Rota para o dashboard, protegida por autenticação
 Route::get('/dashboard', [DashboardController::class, 'index'])
-->middleware('auth')->name('dashboard');
+->middleware(DashboardMiddleware::class)->name('dashboard');
 
 Route::get('/dashboard/minhas-consultas', [DashboardController::class, 'minhasConsultas'])->name('dashboard.minhasConsultas');
 

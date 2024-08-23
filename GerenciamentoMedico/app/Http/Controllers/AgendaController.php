@@ -31,7 +31,7 @@ class AgendaController extends Controller
             'consulta_id' => $consulta->id,
         ]);
 
-        return redirect()->route('consultas.show', $agenda->id)
+        return redirect()->back()
             ->with('success', 'Consulta agendada com sucesso.');
     }
 }
