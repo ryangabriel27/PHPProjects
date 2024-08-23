@@ -23,6 +23,7 @@
 - ## Planejamento e Preparação (1 Semana)
     - ### Reunião Inicial
         - #### Alinhar expectativas e objetivos com a equipe.
+        - #### Entrevista com clientes pela equipe de comunicação
         - #### Definir papéis e responsabilidades.
         - #### Revisar e confirmar o escopo do projeto.
     - ### Análise de Requisitos e Design
@@ -48,7 +49,7 @@
         - #### Implementar a lógica de agendamento e gerenciamento de consultas.
         - #### Implementar a funcionalidade de edição e cancelamento de consultas.
     - ### Front-End Completo
-        - #### Finalizar as páginas do paciente e médico, incluindo filtros e opções de busca.
+        - #### Finalizar as páginas do paciente e médico, incluindo opções de busca.
         - #### Melhorar a interface com base em feedback do protótipo.
     - ### Integração e Testes
         - #### Integrar completamente front-end e back-end.
