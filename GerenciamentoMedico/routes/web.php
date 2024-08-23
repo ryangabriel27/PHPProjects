@@ -44,3 +44,4 @@ Route::get('consultas/{consulta}', [ConsultaController::class, 'show'])
 
 Route::post('agenda/add/{consulta}', [AgendaController::class, 'add'])
 ->middleware('auth')->name('agenda.add');
+

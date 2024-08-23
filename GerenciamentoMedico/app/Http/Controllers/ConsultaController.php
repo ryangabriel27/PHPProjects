@@ -46,8 +46,8 @@ class ConsultaController extends Controller
             ->where('horario', $dados['horario'])
             ->where('medico_id', $dados['medico_id'])
             ->exists();
-        
-            
+
+
         if ($existeConsulta) {
             return redirect()->back()
                 ->withErrors(['horario' => 'Já existe uma consulta agendada para este horário.'])
@@ -92,6 +92,10 @@ class ConsultaController extends Controller
      */
     public function destroy(Consulta $consulta)
     {
+        // Excluir todos os registros relacionados na tabela `agendas`
+        $consulta->agendas()->delete();
+
+        // Excluir a consulta
         $consulta->delete();
 
         return redirect()->route('consultas.index')
