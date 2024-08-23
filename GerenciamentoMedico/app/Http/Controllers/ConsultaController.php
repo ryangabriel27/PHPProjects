@@ -15,7 +15,9 @@ class ConsultaController extends Controller
     public function index()
     {
         $usuario = Auth::user();
-        $consultas = Consulta::where('medico_id', $usuario->id)->get();
+        $consultas = Consulta::where('medico_id', $usuario->id)
+            ->orderBy('data')
+            ->get();
 
         return view('consultas.index', compact('consultas'));
     }

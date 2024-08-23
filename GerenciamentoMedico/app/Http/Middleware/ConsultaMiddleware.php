@@ -19,8 +19,6 @@ class ConsultaMiddleware
         if (Auth::check() && Auth::user()->tipo === 'medico') {
             return $next($request);
         }
-
-
         // Se não for uma empresa, redireciona com uma mensagem de erro
         return redirect()->route('home')->withErrors(['access' => 'Você não tem permissão para acessar
         essa área.']);
